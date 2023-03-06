@@ -88,8 +88,8 @@ describe("scanDescription", () => {
 });
 
 describe("getFreeCoords", () => {
-  describe("When gets called with grid and item", () => {
-    it("should return free coords", () => {
+  describe("When gets called with grid occuped in (0, 0) and item size 1x1", () => {
+    it("should return { x: 1, y: 0 }", () => {
       const grid = [
         [1, 0, 0, 0, 0],
         [0, 0, 0, 0, 0],
@@ -110,8 +110,8 @@ describe("getFreeCoords", () => {
       expect(received).toEqual(expected);
     });
   });
-  describe("When gets called with grid and item", () => {
-    it("should return free coords", () => {
+  describe("When gets called with grid occuped in (0, 0) and item size 2x1", () => {
+    it("should return { x: 1, y: 0 }", () => {
       const grid = [
         [1, 0, 0, 0, 0],
         [0, 0, 0, 0, 0],
@@ -132,8 +132,8 @@ describe("getFreeCoords", () => {
       expect(received).toEqual(expected);
     });
   });
-  describe("When gets called with grid and item", () => {
-    it("should return free coords", () => {
+  describe("When gets called with grid occuped in (0, 0) and (2, 0) and item 2x1", () => {
+    it("should return { x: 3, y: 0 }", () => {
       const grid = [
         [1, 0, 1, 0, 0],
         [0, 0, 0, 0, 0],
@@ -154,8 +154,8 @@ describe("getFreeCoords", () => {
       expect(received).toEqual(expected);
     });
   });
-  describe("When gets called with grid and item", () => {
-    it("should return free coords", () => {
+  describe("When gets called with grid occuped in first row and item 2x1", () => {
+    it("should return { x: 0, y: 1 }", () => {
       const grid = [
         [1, 0, 1, 0, 1],
         [0, 0, 0, 0, 0],
@@ -176,8 +176,8 @@ describe("getFreeCoords", () => {
       expect(received).toEqual(expected);
     });
   });
-  describe("When gets called with grid and item", () => {
-    it("should return free coords", () => {
+  describe("When gets called with grid occuped in first row and in (0, 2) and item 2x2", () => {
+    it("should return { x: 1, y: 1 }", () => {
       const grid = [
         [1, 0, 1, 0, 1],
         [0, 0, 0, 0, 0],
@@ -198,8 +198,8 @@ describe("getFreeCoords", () => {
       expect(received).toEqual(expected);
     });
   });
-  describe("When gets called with grid and item", () => {
-    it("should return free coords", () => {
+  describe("When gets called with grid free only in last row and item 2x2", () => {
+    it("should return { x: 0, y: 3 }", () => {
       const grid = [
         [1, 0, 1, 0, 1],
         [0, 0, 0, 1, 0],
@@ -220,8 +220,8 @@ describe("getFreeCoords", () => {
       expect(received).toEqual(expected);
     });
   });
-  describe("When gets called with grid and item", () => {
-    it("should return free coords", () => {
+  describe("When gets called with all grid boxes occuped and item 2x2", () => {
+    it("should return { x: 0, y: 4 }", () => {
       const grid = [
         [1, 0, 1, 0, 1],
         [0, 0, 0, 1, 0],
@@ -242,8 +242,8 @@ describe("getFreeCoords", () => {
       expect(received).toEqual(expected);
     });
   });
-  describe("When gets called with grid and item", () => {
-    it("should return free coords", () => {
+  describe("When gets called with empty grid and any item", () => {
+    it("should return { x: 0, y: 0 }", () => {
       const grid = [];
 
       const item = {

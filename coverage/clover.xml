@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1678111926759" clover="3.2.0">
-  <project timestamp="1678111926759" name="All files">
+<coverage generated="1678112542473" clover="3.2.0">
+  <project timestamp="1678112542474" name="All files">
     <metrics statements="75" coveredstatements="69" conditionals="21" coveredconditionals="19" methods="14" coveredmethods="14" elements="110" coveredelements="102" complexity="0" loc="75" ncloc="75" packages="1" files="1" classes="1"/>
     <file name="utilities.ts" path="C:\Users\Carlo\Desktop\development-unofficial\tetris-logic\src\utilities.ts">
       <metrics statements="75" coveredstatements="69" conditionals="21" coveredconditionals="19" methods="14" coveredmethods="14"/>
