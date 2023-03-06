@@ -48,7 +48,7 @@ export const getSpacesDescription = (
       }
     }
 
-    if (coords.x < 5 - width) {
+    if (coords.x <= 5 - width) {
       spacesDescription.push({ coords: coords, description: description });
     }
   });

@@ -100,12 +100,161 @@ describe("getFreeCoords", () => {
       const item = {
         x: undefined,
         y: undefined,
-        width: 2,
-        height: 3,
+        width: 1,
+        height: 1,
       };
 
       const received = getFreeCoords(grid, item);
       const expected = { x: 1, y: 0 };
+
+      expect(received).toEqual(expected);
+    });
+  });
+  describe("When gets called with grid and item", () => {
+    it("should return free coords", () => {
+      const grid = [
+        [1, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+      ];
+
+      const item = {
+        x: undefined,
+        y: undefined,
+        width: 2,
+        height: 1,
+      };
+
+      const received = getFreeCoords(grid, item);
+      const expected = { x: 1, y: 0 };
+
+      expect(received).toEqual(expected);
+    });
+  });
+  describe("When gets called with grid and item", () => {
+    it("should return free coords", () => {
+      const grid = [
+        [1, 0, 1, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+      ];
+
+      const item = {
+        x: undefined,
+        y: undefined,
+        width: 2,
+        height: 1,
+      };
+
+      const received = getFreeCoords(grid, item);
+      const expected = { x: 3, y: 0 };
+
+      expect(received).toEqual(expected);
+    });
+  });
+  describe("When gets called with grid and item", () => {
+    it("should return free coords", () => {
+      const grid = [
+        [1, 0, 1, 0, 1],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+      ];
+
+      const item = {
+        x: undefined,
+        y: undefined,
+        width: 2,
+        height: 1,
+      };
+
+      const received = getFreeCoords(grid, item);
+      const expected = { x: 0, y: 1 };
+
+      expect(received).toEqual(expected);
+    });
+  });
+  describe("When gets called with grid and item", () => {
+    it("should return free coords", () => {
+      const grid = [
+        [1, 0, 1, 0, 1],
+        [0, 0, 0, 0, 0],
+        [1, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+      ];
+
+      const item = {
+        x: undefined,
+        y: undefined,
+        width: 2,
+        height: 2,
+      };
+
+      const received = getFreeCoords(grid, item);
+      const expected = { x: 1, y: 1 };
+
+      expect(received).toEqual(expected);
+    });
+  });
+  describe("When gets called with grid and item", () => {
+    it("should return free coords", () => {
+      const grid = [
+        [1, 0, 1, 0, 1],
+        [0, 0, 0, 1, 0],
+        [1, 0, 1, 0, 0],
+        [0, 0, 0, 0, 1],
+      ];
+
+      const item = {
+        x: undefined,
+        y: undefined,
+        width: 2,
+        height: 2,
+      };
+
+      const received = getFreeCoords(grid, item);
+      const expected = { x: 0, y: 3 };
+
+      expect(received).toEqual(expected);
+    });
+  });
+  describe("When gets called with grid and item", () => {
+    it("should return free coords", () => {
+      const grid = [
+        [1, 0, 1, 0, 1],
+        [0, 0, 0, 1, 0],
+        [1, 0, 1, 0, 0],
+        [1, 0, 1, 0, 1],
+      ];
+
+      const item = {
+        x: undefined,
+        y: undefined,
+        width: 2,
+        height: 2,
+      };
+
+      const received = getFreeCoords(grid, item);
+      const expected = { x: 0, y: 4 };
+
+      expect(received).toEqual(expected);
+    });
+  });
+  describe("When gets called with grid and item", () => {
+    it("should return free coords", () => {
+      const grid = [];
+
+      const item = {
+        x: undefined,
+        y: undefined,
+        width: 2,
+        height: 2,
+      };
+
+      const received = getFreeCoords(grid, item);
+      const expected = { x: 0, y: 0 };
 
       expect(received).toEqual(expected);
     });
