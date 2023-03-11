@@ -259,6 +259,28 @@ describe("getFreeCoords", () => {
       expect(received).toEqual(expected);
     });
   });
+  describe("When gets called with first row occuped and any item 2x1", () => {
+    it("should return { x: 1, y: 1 }", () => {
+      const grid = [
+        [1, 0, 1, 0, 1],
+        [1, 0, 0, 1, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+      ];
+
+      const item = {
+        x: undefined,
+        y: undefined,
+        width: 2,
+        height: 1,
+      };
+
+      const received = getFreeCoords(grid, item);
+      const expected = { x: 1, y: 1 };
+
+      expect(received).toEqual(expected);
+    });
+  });
 });
 
 //=============================================
